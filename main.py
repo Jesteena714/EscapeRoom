@@ -232,7 +232,7 @@ def room_1():
     st.dataframe(df)
 
     # Display descriptive summary
-    '''st.write("### 📊 **Descriptive Summary of Cargo Weights**")
+    st.write("### 📊 **Descriptive Summary of Cargo Weights**")
     descriptive_stats = df["Weight"].describe().to_frame()
     descriptive_stats.loc["Mode"] = df["Weight"].mode()[0]
     descriptive_stats.loc["Range"] = df["Weight"].max() - df["Weight"].min()
@@ -240,7 +240,7 @@ def room_1():
     outliers = sum((df["Weight"] < (df["Weight"].quantile(0.25) - 1.5 * IQR)) | 
                     (df["Weight"] > (df["Weight"].quantile(0.75) + 1.5 * IQR)))
     descriptive_stats.loc["Outliers"] = outliers
-    st.write(descriptive_stats)'''
+    st.write(descriptive_stats)
 
     # Timer logic
     current_time = time.time()
